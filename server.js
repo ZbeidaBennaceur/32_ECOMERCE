@@ -13,7 +13,7 @@ const app=express();
 
 //MIDDLEWARE
 app.use(cors({
-    origin: "https://theshopping.netlify.app"
+    origin: "https://theshoppingone.netlify.app"
   }));
 app.use(express.json())
 
