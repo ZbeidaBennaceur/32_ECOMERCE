@@ -8,14 +8,14 @@ const ErrorToast = ({ errors }) => {
 
   useEffect(() => {
     if (Array.isArray(errors)) {
-      errors.map((error,i) => {
+      errors.forEach((error, i) => {
         toast.error(error.msg, {
-          position:"top-right",
-  autoClose:3000,
-  hideProgressBar:false,
-  newestOnTop:false,
-  closeOnClick:true,
-  theme:"light",
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          newestOnTop: false,
+          closeOnClick: true,
+          theme: "light",
           toastId: `${error.msg}-${Date.now()}`
         });
       });
