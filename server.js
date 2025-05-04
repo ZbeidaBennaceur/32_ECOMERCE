@@ -4,6 +4,7 @@
 const express=require("express");
 const connectDB = require("./config/connectDB");
 require("dotenv").config();
+const cors = require("cors");
 
 
 
@@ -11,6 +12,9 @@ require("dotenv").config();
 const app=express();
 
 //MIDDLEWARE
+app.use(cors({
+    origin: "https://theshopping.netlify.app"
+  }));
 app.use(express.json())
 
 //Connexion à la database
